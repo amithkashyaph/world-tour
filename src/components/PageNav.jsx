@@ -1,19 +1,29 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styles from "./PageNav.module.css";
+import Logo from "./Logo";
+import { useAuth } from "../contexts/FakeAuthenticationContext";
 
 const PageNav = () => {
+  const { isAuthenticated, logout } = useAuth();
   return (
     <nav className={styles.nav}>
+      <Logo />
       <ul>
         <li>
-          <Link to="/">Homepage</Link>
+          <NavLink to="/product">Product</NavLink>
         </li>
         <li>
-          <Link to="/product">Product</Link>
+          <NavLink to="/pricing">Pricing</NavLink>
         </li>
         <li>
-          <Link to="/pricing">Pricing</Link>
+          <NavLink
+            to={isAuthenticated ? "/" : "/login"}
+            className={styles.ctaLink}
+            onClick={() => logout()}
+          >
+            {isAuthenticated ? "Log out" : "Log in"}
+          </NavLink>
         </li>
       </ul>
     </nav>
