@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { lazy, useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -9,7 +9,7 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import HomePage from "./pages/Homepage";
+// import HomePage from "./pages/Homepage";
 import Product from "./pages/Product";
 import Pricing from "./pages/Pricing";
 import PageNotFound from "./pages/PageNotFound";
@@ -22,6 +22,8 @@ import Form from "./components/Form";
 import CitiesProvider, { useCities } from "./contexts/CitiesContext";
 import { AuthProvider } from "./contexts/FakeAuthenticationContext";
 import ProtectedRoute from "./pages/ProtectedRoute";
+
+const HomePage = lazy(() => <HomePage />);
 
 function App() {
   // const context = useCities();
