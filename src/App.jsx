@@ -13,8 +13,8 @@ import {
 // import Product from "./pages/Product";
 // import Pricing from "./pages/Pricing";
 // import PageNotFound from "./pages/PageNotFound";
-import Login from "./pages/Login";
-import AppLayout from "./pages/AppLayout";
+// import Login from "./pages/Login";
+// import AppLayout from "./pages/AppLayout";
 import CityList from "./components/CityList";
 import CountryList from "./components/CountryList";
 import City from "./components/City";
@@ -27,6 +27,8 @@ const HomePage = lazy(() => import("./pages/Homepage"));
 const Product = lazy(() => import("./pages/Product"));
 const Pricing = lazy(() => import("./pages/Pricing"));
 const PageNotFound = lazy(() => import("./pages/PageNotFound"));
+const Login = lazy(() => import("./pages/Login"));
+const AppLayout = lazy(() => import("./pages/AppLayout"));
 
 function App() {
   // const context = useCities();
