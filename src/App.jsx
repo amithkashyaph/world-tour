@@ -10,9 +10,9 @@ import {
   Routes,
 } from "react-router-dom";
 // import HomePage from "./pages/Homepage";
-import Product from "./pages/Product";
-import Pricing from "./pages/Pricing";
-import PageNotFound from "./pages/PageNotFound";
+// import Product from "./pages/Product";
+// import Pricing from "./pages/Pricing";
+// import PageNotFound from "./pages/PageNotFound";
 import Login from "./pages/Login";
 import AppLayout from "./pages/AppLayout";
 import CityList from "./components/CityList";
@@ -24,6 +24,9 @@ import { AuthProvider } from "./contexts/FakeAuthenticationContext";
 import ProtectedRoute from "./pages/ProtectedRoute";
 
 const HomePage = lazy(() => import("./pages/Homepage"));
+const Product = lazy(() => import("./pages/Product"));
+const Pricing = lazy(() => import("./pages/Pricing"));
+const PageNotFound = lazy(() => import("./pages/PageNotFound"));
 
 function App() {
   // const context = useCities();
