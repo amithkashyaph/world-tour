@@ -23,7 +23,7 @@ import CitiesProvider, { useCities } from "./contexts/CitiesContext";
 import { AuthProvider } from "./contexts/FakeAuthenticationContext";
 import ProtectedRoute from "./pages/ProtectedRoute";
 
-const HomePage = lazy(() => <HomePage />);
+const HomePage = lazy(() => import("./pages/Homepage"));
 
 function App() {
   // const context = useCities();
